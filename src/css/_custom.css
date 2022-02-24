@@ -1,0 +1,19 @@
+.borderNone {
+  border-bottom: none !important;
+}
+.borderRight{
+  border-right: none !important;
+
+}
+.alignText {
+  display: block !important;
+  text-align: center !important;
+  font-size: 15px !important;
+  /* word-spacing: 15.200000000000003px !important; */
+}
+.marginLeft{
+    padding-left: 46% !important;
+}
+.paddingRight{
+  padding-left: 13% !important;
+}
