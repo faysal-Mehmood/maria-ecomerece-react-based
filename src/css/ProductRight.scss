@@ -15,6 +15,7 @@
     padding-right: 0;
     padding-left: 0;
     .btn {
+      font-size: 22pt;
       outline: none !important;
     }
   }
@@ -24,6 +25,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    h4 {
+      font-size: 22pt;
+    }
   }
 }
 .second_section {
@@ -38,12 +42,14 @@
     align-items: center;
     word-spacing: 28px;
     letter-spacing: 0.063rem;
+    font-size: 18pt;
   }
   .para_2 {
     display: flex;
     align-items: center;
     letter-spacing: 0.063rem;
     word-spacing: 24.6px;
+    font-size: 18pt;
   }
 }
 .third_section {
@@ -52,11 +58,19 @@
     ul {
       list-style: none;
       letter-spacing: 0.063rem;
+      li {
+        font-size: 18pt;
+      }
     }
   }
   .right_section {
     ul {
       list-style: none;
+      li {
+        .iput {
+          font-size: 18pt;
+        }
+      }
     }
   }
 }
@@ -66,6 +80,9 @@
     display: flex;
     align-items: center;
     letter-spacing: 0.063rem;
+  }
+  .paraPoint {
+    font-size: 18pt;
   }
   .paraPoint.para1 {
     word-spacing: 36.9px;
@@ -94,7 +111,7 @@
 }
 
 .header1 {
-  font-size: 12pt !important;
+  font-size: 14pt !important;
   border: none !important;
   outline: none !important;
   letter-spacing: 0.063rem;
@@ -137,6 +154,9 @@
 .nav.default-nav svg {
   width: 10px !important;
   height: 10px !important;
+}
+.subtotalZero span {
+  font-size: 14pt;
 }
 
 @media (min-width: 882px) {
@@ -235,9 +255,9 @@
     font-size: 12pt !important;
     letter-spacing: 0.063rem !important;
   }
-  .header1 {
-    font-size: 12pt !important;
-  }
+  // .header1 {
+  //   font-size: 12pt !important;
+  // }
   .header2 {
     font-size: 12pt !important;
   }
