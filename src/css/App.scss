@@ -2,6 +2,7 @@
 @import "./Props.scss";
 @import "./media.scss";
 @import "./uifonts.scss";
+@import "./fonts/SF-PRO/stylesheet.scss";
 
 .font {
   font-family: "Roboto", sans-serif;
@@ -332,7 +333,6 @@ $borderColor: #020102;
     margin-bottom: 30px;
   }
 }
-
 
 // Home Page
 .home-p {

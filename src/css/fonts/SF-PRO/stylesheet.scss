@@ -1,0 +1,32 @@
+@import "../../fontSizes.scss";
+@font-face {
+  font-family: $SF-Pro-Font;
+  src: url("HelveticaNeueDeskInterface-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: $SF-Pro-Font;
+  src: url("HelveticaNeueDeskInterface-Thin.ttf") format("truetype");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: $SF-Pro-Font;
+  src: url("HelveticaNeueDeskInterface-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: $SF-Pro-Font;
+  src: url("HelveticaNeueDeskInterface-UltraLightP2.ttf") format("truetype");
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
