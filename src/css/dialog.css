@@ -11,7 +11,7 @@
 }
 .money-sign-cart,
 .sign-cart {
-  font-size: 1.4rem;
+  font-size: 18px;
 }
 
 @media (max-width: 882px) {
@@ -21,6 +21,6 @@
   }
   .money-sign-cart,
   .sign-cart {
-    font-size: 0.76rem;
+    font-size: 18px;
   }
 }

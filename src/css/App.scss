@@ -1,14 +1,14 @@
-@import "./Colors.scss";
-@import "./Props.scss";
-@import "./media.scss";
-@import "./uifonts.scss";
-@import "./fonts/SF-PRO/stylesheet.scss";
+@import './Colors.scss';
+@import './Props.scss';
+@import './media.scss';
+@import './uifonts.scss';
+@import './fonts/SF-PRO/stylesheet.scss';
 
 .font {
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 .fontr {
-  font-family: "Varela Round", sans-serif;
+  font-family: 'Varela Round', sans-serif;
 }
 
 $borderColor: #020102;
@@ -96,7 +96,7 @@ $borderColor: #020102;
       display: none;
       color: $themeColor;
       font-size: 24px;
-      @include media("<=480px") {
+      @include media('<=480px') {
         display: none;
       }
     }
@@ -119,7 +119,7 @@ $borderColor: #020102;
       padding: 16px 22px 16px 23px;
       position: sticky;
       .label {
-        @include media(">=phone", "<=480px") {
+        @include media('>=phone', '<=480px') {
           font-size: 16px;
         }
       }
@@ -134,7 +134,7 @@ $borderColor: #020102;
   box-sizing: border-box;
   border-radius: 3px;
   width: 100%;
-  @include media(">=phone", "<=480px") {
+  @include media('>=phone', '<=480px') {
     margin-left: 0px;
     width: 100%;
     padding: 0 20px;
@@ -148,18 +148,18 @@ $borderColor: #020102;
       flex: 1;
       text-align: start;
       letter-spacing: 1.5px;
-      @include media(">=320px", "<=380px") {
+      @include media('>=320px', '<=380px') {
         font-size: 11pt;
         letter-spacing: 0.3px;
       }
-      @include media(">380px", "<=480px") {
+      @include media('>380px', '<=480px') {
         font-size: 13pt;
         letter-spacing: 0.3px;
       }
     }
     .arrow {
       margin-right: 10px;
-      @include media(">=phone", "<=480px") {
+      @include media('>=phone', '<=480px') {
         font-size: 16px;
         margin-right: 8px;
       }
@@ -187,7 +187,7 @@ $borderColor: #020102;
         background: #f8f8f8;
       }
       .txt {
-        @include media(">=phone", "<=480px") {
+        @include media('>=phone', '<=480px') {
           font-size: 15px;
         }
       }
@@ -210,7 +210,7 @@ $borderColor: #020102;
   padding: 0 40px;
   border-bottom: 1px solid $borderColor;
   z-index: 999;
-  @include media(">=phone", "<=480px") {
+  @include media('>=phone', '<=480px') {
     padding: 0 13px;
     height: 44px;
     padding-bottom: 4px;
@@ -218,23 +218,23 @@ $borderColor: #020102;
   .lit {
     align-items: flex-end;
     margin-bottom: 5px;
-    @include media("<=tablet") {
+    @include media('<=tablet') {
       flex: 2;
     }
-    @include media(">=phone", "<=480px") {
+    @include media('>=phone', '<=480px') {
       margin-bottom: 2px;
     }
     .item {
       .ico {
         margin: 0px 5px;
         font-size: 18px;
-        @include media(">=phone", "<=480px") {
+        @include media('>=phone', '<=480px') {
           margin: 0px 0px;
           font-size: 14px;
         }
       }
       .tag {
-        @include media(">=phone", "<=480px") {
+        @include media('>=phone', '<=480px') {
           font-size: 11pt;
         }
       }
@@ -250,13 +250,13 @@ $borderColor: #020102;
     margin-right: 3px;
     .img {
       height: 35px;
-      @include media(">=phone", "<=480px") {
+      @include media('>=phone', '<=480px') {
         height: 28px;
       }
       &:first-child {
         margin-right: 20px;
         margin-top: 11px;
-        @include media(">=phone", "<=480px") {
+        @include media('>=phone', '<=480px') {
           margin-right: 10px;
         }
       }
@@ -264,7 +264,7 @@ $borderColor: #020102;
         font-size: 13pt;
         font-weight: 500;
         margin-top: 8px;
-        @include media(">=phone", "<=480px") {
+        @include media('>=phone', '<=480px') {
           font-size: 11pt;
           margin-top: 5px;
         }
@@ -275,7 +275,7 @@ $borderColor: #020102;
       height: 35px;
       width: 33px;
       justify-content: center;
-      @include media(">=phone", "<=480px") {
+      @include media('>=phone', '<=480px') {
         height: 29px;
         width: 27px;
       }
@@ -289,16 +289,16 @@ $borderColor: #020102;
     padding-right: 28px;
   }
   .cart {
-    font-size: 9pt;
+    font-size: 18px;
     .checkoutBtn {
-      font-size: 9pt;
+      font-size: 18px;
     }
   }
   .checkout {
-    font-size: 9pt;
+    font-size: 18px;
     margin-top: 2rem;
     .shipButton {
-      font-size: 9pt;
+      font-size: 18px !important;
     }
   }
 }
@@ -309,7 +309,7 @@ $borderColor: #020102;
   padding-right: 28px;
   width: 100%;
   justify-content: space-between;
-  @include media("<=tablet") {
+  @include media('<=tablet') {
     justify-content: space-between;
   }
   .img {
@@ -338,7 +338,7 @@ $borderColor: #020102;
 .home-p {
   min-height: 85vh;
   border-bottom: 1px solid $borderColor;
-  @include media("<=phoneH") {
+  @include media('<=phoneH') {
     display: flex;
     flex-direction: column;
   }
@@ -346,7 +346,7 @@ $borderColor: #020102;
     flex: 1;
     width: 100%;
     border-right: 1px solid $borderColor;
-    @include media("<=phoneH") {
+    @include media('<=phoneH') {
       border-right: none;
       border-bottom: 1px solid $borderColor;
       &:last-child {
@@ -373,7 +373,7 @@ $borderColor: #020102;
 // Product page
 .product-p {
   .wrap {
-    @include media("<=tablet") {
+    @include media('<=tablet') {
       flex-direction: column;
     }
     .left {
@@ -382,19 +382,19 @@ $borderColor: #020102;
       border-right: 1px solid $borderColor;
       justify-content: center;
       overflow: hidden;
-      @include media("<=tablet") {
+      @include media('<=tablet') {
         border-right: none;
         border-bottom: 1px solid $borderColor;
         max-width: 100%;
       }
       .item {
-        @include media(">=phone", "<=480px") {
+        @include media('>=phone', '<=480px') {
           display: none;
         }
       }
       .small-screen {
         display: none;
-        @include media(">=phone", "<=480px") {
+        @include media('>=phone', '<=480px') {
           display: block;
           margin-bottom: -4px;
         }
@@ -403,21 +403,21 @@ $borderColor: #020102;
         height: 100%;
         min-width: 90%;
         max-height: calc(100vh - 120px);
-        @include media("<=1225px") {
+        @include media('<=1225px') {
           height: 91%;
           width: 100%;
         }
-        @include media("<=1225px") {
+        @include media('<=1225px') {
           height: 80%;
         }
-        @include media("<=940px") {
+        @include media('<=940px') {
           height: 74%;
         }
-        @include media("<=tablet") {
+        @include media('<=tablet') {
           height: 700px;
           width: auto;
         }
-        @include media(">=phone", "<=480px") {
+        @include media('>=phone', '<=480px') {
           height: 100%;
           width: 100%;
         }
@@ -434,11 +434,11 @@ $borderColor: #020102;
         .price {
           flex: 1;
           letter-spacing: 0.3px;
-          @include media(">=320px", "<=380px") {
+          @include media('>=320px', '<=380px') {
             letter-spacing: inherit;
             font-size: 14pt;
           }
-          @include media(">380px", "<=480px") {
+          @include media('>380px', '<=480px') {
             letter-spacing: inherit;
           }
         }
@@ -448,14 +448,14 @@ $borderColor: #020102;
           padding: 34px 0px;
           border-left: 1px solid $borderColor;
           letter-spacing: 0.7px;
-          @include media("<=desktop") {
+          @include media('<=desktop') {
             padding: 30px 0px;
           }
-          @include media(">=phone", "<=480px") {
+          @include media('>=phone', '<=480px') {
             padding: 24px 0px;
             letter-spacing: inherit;
           }
-          @include media(">=320px", "<=480px") {
+          @include media('>=320px', '<=480px') {
             font-size: 14pt;
           }
           &.closed {
@@ -469,28 +469,31 @@ $borderColor: #020102;
         padding: 0px 30px;
         justify-content: center;
         padding-top: 20px;
-        @include media(">=phone", "<=480px") {
+        @include media('>=phone', '<=480px') {
           padding: 0px 13px;
           padding-top: 20px;
         }
         .blk {
           width: 490px;
-          @include media(">=phone", "<=480px") {
+          @include media('>=phone', '<=480px') {
             width: 100%;
           }
         }
         .tt {
           letter-spacing: 0.3px;
           text-align: justify;
+          span {
+            font-size: 18px !important;
+          }
           &::after {
-            content: "";
+            content: '';
             display: inline-block;
             width: 100%;
           }
-          @include media(">=320px", "<=380px") {
+          @include media('>=320px', '<=380px') {
             font-size: 11pt;
           }
-          @include media(">380px", "<=480px") {
+          @include media('>380px', '<=480px') {
             font-size: 13pt;
           }
         }
@@ -498,40 +501,40 @@ $borderColor: #020102;
       .filters {
         border-bottom: 1px solid $borderColor;
         padding: 0px 30px;
-        @include media(">=phone", "<=480px") {
+        @include media('>=phone', '<=480px') {
           padding: 0px;
         }
         .lit {
           flex: 1;
           justify-content: center;
-          @include media(">=phone", "<=480px") {
+          @include media('>=phone', '<=480px') {
             align-items: start;
             justify-content: start;
           }
           .blk {
             padding: 22px 0px 0px 0px;
-            @include media(">=phone", "<=480px") {
+            @include media('>=phone', '<=480px') {
               padding: 22px 13px 0px 13px;
             }
             .lbl {
               letter-spacing: 1.3px;
               text-align: justify;
               line-height: 20px;
-              @include media(">=phone", "<=480px") {
+              @include media('>=phone', '<=480px') {
                 letter-spacing: 0.3px;
               }
               &::after {
-                content: "";
+                content: '';
                 display: inline-block;
                 width: 100%;
               }
               &:last-child {
                 margin-bottom: 0px;
               }
-              @include media(">=320px", "<=380px") {
+              @include media('>=320px', '<=380px') {
                 font-size: 11pt;
               }
-              @include media(">380px", "<=480px") {
+              @include media('>380px', '<=480px') {
                 font-size: 13pt;
               }
             }
@@ -541,13 +544,13 @@ $borderColor: #020102;
           flex: 1;
           justify-content: center;
           border-left: 1px solid $borderColor;
-          @include media(">=phone", "<=480px") {
+          @include media('>=phone', '<=480px') {
             justify-content: flex-start;
             align-items: flex-start;
           }
           .blk {
             padding: 22px 0px 0px 0px;
-            @include media(">=phone", "<=480px") {
+            @include media('>=phone', '<=480px') {
               padding: 22px 13px 0px 13px;
             }
             .cstm-slt {
@@ -562,14 +565,14 @@ $borderColor: #020102;
         padding-top: 25px;
         justify-content: center;
         align-items: center;
-        @include media(">=phone", "<=480px") {
+        @include media('>=phone', '<=480px') {
           align-items: flex-start;
           padding: 5px 13px;
           padding-top: 18px;
         }
         .meta {
           width: 480px;
-          @include media(">=phone", "<=480px") {
+          @include media('>=phone', '<=480px') {
             width: 100%;
           }
           .item {
@@ -577,7 +580,7 @@ $borderColor: #020102;
             .dot {
               margin-bottom: 25px;
               margin-right: 20px;
-              @include media(">=phone", "<=480px") {
+              @include media('>=phone', '<=480px') {
                 margin-bottom: 17px;
                 margin-right: 15px;
                 font-size: 11pt;
@@ -587,21 +590,21 @@ $borderColor: #020102;
               text-align: justify;
               flex: 1;
               line-height: 1.4;
-              @include media(">=phone", "<=480px") {
+              @include media('>=phone', '<=480px') {
                 line-height: 1.15;
               }
               &::after {
-                content: "";
+                content: '';
                 display: inline-block;
                 width: 100%;
               }
               &:last-child {
                 margin-bottom: 0px;
               }
-              @include media(">=320px", "<=380px") {
+              @include media('>=320px', '<=380px') {
                 font-size: 11pt;
               }
-              @include media(">380px", "<=480px") {
+              @include media('>380px', '<=480px') {
                 font-size: 13pt;
               }
             }
@@ -611,7 +614,7 @@ $borderColor: #020102;
     }
     .row {
       .item-2-1 {
-        @include media(">=phone", "<=480px") {
+        @include media('>=phone', '<=480px') {
           word-spacing: 9.1px;
         }
       }
@@ -621,7 +624,7 @@ $borderColor: #020102;
         @media (max-width: 882px) {
           word-spacing: 12.5px;
         }
-        @include media(">=phone", "<=480px") {
+        @include media('>=phone', '<=480px') {
           word-spacing: 12.1px;
         }
       }
@@ -631,7 +634,7 @@ $borderColor: #020102;
         @media (max-width: 882px) {
           word-spacing: 10.7px;
         }
-        @include media(">=phone", "<=480px") {
+        @include media('>=phone', '<=480px') {
           word-spacing: 10.45px;
         }
       }
@@ -658,7 +661,7 @@ figure,
   margin-block-end: 0em;
   margin-inline-start: 0px;
   margin-inline-end: 0px;
-  @include media(">=phone", "<=480px") {
+  @include media('>=phone', '<=480px') {
     margin: 0px !important;
     margin-block-start: 0em;
     margin-block-end: 0em;
@@ -677,7 +680,7 @@ figure,
       .img {
         height: 120px;
       }
-      @include media(">=phone", "<=480px") {
+      @include media('>=phone', '<=480px') {
         margin-right: 15px;
       }
     }
@@ -689,6 +692,10 @@ figure,
         overflow: hidden;
         overflow-y: auto;
         width: 100%;
+        div {
+          font-size: 18px;
+        }
+
         &::-webkit-scrollbar {
           width: 3px;
         }
@@ -769,7 +776,7 @@ figure,
     justify-content: center;
     border-top: 1px solid $borderColor;
     border-bottom: 1px solid $borderColor;
-    @include media(">=phone", "<=480px") {
+    @include media('>=phone', '<=480px') {
       padding: 25px 0px;
     }
   }
@@ -806,16 +813,18 @@ figure,
     .iput {
       border: 1px solid $borderColor;
       padding: 10px 18px;
+      font-size: 18px;
       &:focus {
         border-color: $themeColor;
       }
       &::placeholder {
-        color: $black;
+        color: #333;
       }
     }
     .btn {
       color: #020102;
       padding: 10px;
+      font-size: 18px;
     }
   }
 }
@@ -829,31 +838,31 @@ figure,
 .dialogbox {
   .msgbox {
     background: #f0eeee;
-    @include media(">=phone", "<=480px") {
+    @include media('>=phone', '<=480px') {
       height: calc(100vh - 0px);
       overflow-y: auto;
     }
-    @include media("<=390px") {
+    @include media('<=390px') {
       max-width: 385px;
       min-width: 385px;
     }
-    @include media(">=391px", "<=426px") {
+    @include media('>=391px', '<=426px') {
       max-width: 440px;
       min-width: 440px;
     }
     .msgbox-content {
-      @include media(">=phone", "<=480px") {
+      @include media('>=phone', '<=480px') {
         height: 100vh;
         padding: 10px 30px 0px 30px;
       }
     }
     .msgbox-head {
-      @include media(">=phone", "<=480px") {
+      @include media('>=phone', '<=480px') {
         padding: 18px 30px 15px 30px;
       }
       .cross {
         color: $black;
-        @include media(">=phone", "<=480px") {
+        @include media('>=phone', '<=480px') {
           top: 8px;
           right: 15px;
         }
@@ -1077,7 +1086,7 @@ $horizontalGap: 30px;
           }
         }
         &::before {
-          content: "";
+          content: '';
           position: absolute;
           height: 23px;
           width: 23px;
@@ -1151,7 +1160,7 @@ $horizontalGap: 30px;
     padding: 0px 20px;
     .title {
       margin-bottom: 6px;
-      @include media(">=phone", "<=480px") {
+      @include media('>=phone', '<=480px') {
         font-size: 22px;
         margin-bottom: 5px;
       }
@@ -1159,7 +1168,7 @@ $horizontalGap: 30px;
     .txt {
       text-align: center;
       line-height: 1.5;
-      @include media(">=phone", "<=480px") {
+      @include media('>=phone', '<=480px') {
         font-size: 15px;
       }
     }

@@ -1,30 +1,30 @@
-import React, { useEffect, useState } from "react";
-import { useHistory } from "react-router-dom";
-import { Toast } from "../ui";
-import { focus, isValidEmail, generateID } from "../core";
-import Selector from "../components/Selector";
-import axios from "axios";
-import { useSelector, useDispatch } from "react-redux";
+import React, { useEffect, useState } from 'react';
+import { useHistory } from 'react-router-dom';
+import { Toast } from '../ui';
+import { focus, isValidEmail, generateID } from '../core';
+import Selector from '../components/Selector';
+import axios from 'axios';
+import { useSelector, useDispatch } from 'react-redux';
 const Cart = (props) => {
   //console.log(props.id)
-  const [step, setStep] = useState("cart");
+  const [step, setStep] = useState('cart');
   //const [price,setprice] = useState('')
 
-  const [fullname, setfullname] = useState("");
-  const [streetaddress, setstreetaddress] = useState("");
-  const [address, setaddress] = useState("");
-  const [city, setcity] = useState("");
-  const [state, setstate] = useState("");
-  const [postalcode, setpostalcode] = useState("");
-  const [country, setcountry] = useState("");
-  const [cellphone, setcellphone] = useState("");
-  const [checkoutbtn, setcheckoutbtn] = useState("Ship to this address");
+  const [fullname, setfullname] = useState('');
+  const [streetaddress, setstreetaddress] = useState('');
+  const [address, setaddress] = useState('');
+  const [city, setcity] = useState('');
+  const [state, setstate] = useState('');
+  const [postalcode, setpostalcode] = useState('');
+  const [country, setcountry] = useState('');
+  const [cellphone, setcellphone] = useState('');
+  const [checkoutbtn, setcheckoutbtn] = useState('Ship to this address');
   const [Quantity, setquantity] = useState(1);
   const [disabled, setdisabled] = useState(false);
-  const [code, setcode] = useState("");
-  const [email, setemail] = useState("");
-  const [items, setitems] = useState("");
-  const [subtotal, setsubtotal] = useState("");
+  const [code, setcode] = useState('');
+  const [email, setemail] = useState('');
+  const [items, setitems] = useState('');
+  const [subtotal, setsubtotal] = useState('');
   const dispatch = useDispatch();
   /*useEffect(() => {
        const items = JSON.parse(localStorage.getItem('shoshancartupdate'));
@@ -34,7 +34,7 @@ const Cart = (props) => {
   //console.log(dialogID)
   useEffect(() => {
     const oldaddress = JSON.parse(
-      localStorage.getItem("soshandeliverdaddress")
+      localStorage.getItem('soshandeliverdaddress')
     );
     if (oldaddress) {
       setfullname(oldaddress.fullname);
@@ -56,7 +56,7 @@ const Cart = (props) => {
     // console.log(cartItems);
     let calsubtotal = 0;
     cartItems.map((item) => {
-      if (item.Tzcolor === "Techelet (₪100)") {
+      if (item.Tzcolor === 'Techelet (₪100)') {
         calsubtotal = calsubtotal + item.Quantity * (item.price + 100);
       } else {
         calsubtotal = calsubtotal + item.Quantity * item.price;
@@ -103,7 +103,7 @@ const Cart = (props) => {
                             {item.Quantity}
                             <span className="font ">&nbsp;&times;&nbsp;</span>
                             {`₪${
-                              item.Tzcolor === "Techelet (₪100)"
+                              item.Tzcolor === 'Techelet (₪100)'
                                 ? item.price + 100
                                 : item.price
                             }`}
@@ -116,7 +116,7 @@ const Cart = (props) => {
                               onClick={() => {
                                 if (item.Quantity > 1) {
                                   dispatch({
-                                    type: "CART_UPDATE",
+                                    type: 'CART_UPDATE',
                                     payload: {
                                       id: item.id,
                                       Quantity: item.Quantity - 1,
@@ -135,7 +135,7 @@ const Cart = (props) => {
                               onClick={() => {
                                 if (item.Quantity < 30) {
                                   dispatch({
-                                    type: "CART_UPDATE",
+                                    type: 'CART_UPDATE',
                                     payload: {
                                       id: item.id,
                                       Quantity: item.Quantity + 1,
@@ -149,7 +149,7 @@ const Cart = (props) => {
                           <button
                             onClick={() => {
                               dispatch({
-                                type: "CART_DELETE_ITEM",
+                                type: 'CART_DELETE_ITEM',
                                 payload: { id: item.id },
                               });
                             }}
@@ -167,10 +167,10 @@ const Cart = (props) => {
 
             <div className="total flex aic">
               <div className="tt font black">
-                <span className="">Subtotal :</span>
+                <span style={{ fontSize: '18px' }}>Subtotal :</span>
                 <span>
-                  {" "}
-                  <strong style={{ fontWeight: 300, fontSize: "1.4rem" }}>
+                  {' '}
+                  <strong style={{ fontWeight: 300, fontSize: '1.4rem' }}>
                     &#8362;
                   </strong>
                   {subtotal}
@@ -179,8 +179,8 @@ const Cart = (props) => {
             </div>
             <div className="actions flex aic">
               <button
-                className="btn button font checkoutBtn c000 anim pt11"
-                onClick={() => setStep("checkout")}
+                className="btn button font checkoutBtn c000 anim"
+                onClick={() => setStep('checkout')}
               >
                 Checkout
               </button>
@@ -195,26 +195,25 @@ const Cart = (props) => {
     let themail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!fullname) {
       //Toast.show({html: "Please enter your full name.", time: 5})
-      focus("._fullname");
+      focus('._fullname');
     } else if (!streetaddress) {
       //Toast.show({html: "Please enter your correct street address.", time: 5})
-      focus("._street");
+      focus('._street');
     } else if (!city) {
       //Toast.show({html: "Please enter your city name.", time: 5})
-      focus("._city");
+      focus('._city');
     } else if (!country) {
       //Toast.show({html: "Please enter your country.", time: 5})
-      focus("._country");
+      focus('._country');
     } else if (!cellphone) {
       //Toast.show({html: "Please enter your cellphone.", time: 5})
-      focus("._phone");
+      focus('._phone');
     } else if (!email || !email.match(themail)) {
       //Toast.show({html: "Please enter valid email address."})
-      focus("._email");
+      focus('._email');
     } else {
-     
       localStorage.setItem(
-        "soshandeliverdaddress",
+        'soshandeliverdaddress',
         JSON.stringify({
           fullname,
           streetaddress,
@@ -233,11 +232,11 @@ const Cart = (props) => {
   };
 
   const checkout = async () => {
-    setcheckoutbtn("Loading...");
+    setcheckoutbtn('Loading...');
     setdisabled(true);
     try {
       const oldaddress = JSON.parse(
-        localStorage.getItem("soshandeliverdaddress")
+        localStorage.getItem('soshandeliverdaddress')
       );
       if (code) {
         const res = await axios.post(
@@ -251,7 +250,7 @@ const Cart = (props) => {
           //Toast.show({ html: `Your code was incorrect, No discount`,type : "error", time: 5 });
         }
       }
-      console.log("cart...", {
+      console.log('cart...', {
         ...props.data,
         code: code,
         address: oldaddress,
@@ -262,7 +261,7 @@ const Cart = (props) => {
       );
       window.location.href = res.data.url;
     } catch (error) {
-      console.log("checkout error", error);
+      console.log('checkout error', error);
       setdisabled(true);
       if (error.response) {
         //Toast.show({ html: `${error.response.data.errors}`,type : "error", time: 5 });
@@ -337,7 +336,7 @@ const Cart = (props) => {
           <input
             type="number"
             onChange={(e) =>
-              setcellphone(e.target.value.replace(/[^0-9\.]/g, ""))
+              setcellphone(e.target.value.replace(/[^0-9\.]/g, ''))
             }
             value={cellphone}
             placeholder="Phone"
@@ -365,7 +364,7 @@ const Cart = (props) => {
         <div className="item flex flex-col">
           <button
             disabled={disabled}
-            className="button shipButton btn font "
+            className="button shipButton btn  "
             onClick={() => saveaddress()}
           >
             {checkoutbtn}
@@ -388,11 +387,11 @@ const Cart = (props) => {
   };
 
   switch (step) {
-    case "cart":
+    case 'cart':
       return _cart();
-    case "checkout":
+    case 'checkout':
       return _checkout();
-    case "payment":
+    case 'payment':
       return _payment();
     default:
       return _cart();

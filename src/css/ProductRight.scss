@@ -15,7 +15,7 @@
     padding-right: 0;
     padding-left: 0;
     .btn {
-      font-size: 22pt;
+      font-size: 22px;
       outline: none !important;
     }
   }
@@ -26,7 +26,7 @@
     align-items: center;
     justify-content: center;
     h4 {
-      font-size: 22pt;
+      font-size: 22px;
     }
   }
 }
@@ -42,14 +42,14 @@
     align-items: center;
     word-spacing: 28px;
     letter-spacing: 0.063rem;
-    font-size: 18pt;
+    font-size: 18px;
   }
   .para_2 {
     display: flex;
     align-items: center;
     letter-spacing: 0.063rem;
     word-spacing: 24.6px;
-    font-size: 18pt;
+    font-size: 18px;
   }
 }
 .third_section {
@@ -59,7 +59,7 @@
       list-style: none;
       letter-spacing: 0.063rem;
       li {
-        font-size: 18pt;
+        font-size: 18px;
       }
     }
   }
@@ -68,7 +68,7 @@
       list-style: none;
       li {
         .iput {
-          font-size: 18pt;
+          font-size: 18px;
         }
       }
     }
@@ -82,7 +82,7 @@
     letter-spacing: 0.063rem;
   }
   .paraPoint {
-    font-size: 18pt;
+    font-size: 18px;
   }
   .paraPoint.para1 {
     word-spacing: 36.9px;
@@ -111,13 +111,13 @@
 }
 
 .header1 {
-  font-size: 14pt !important;
+  font-size: 18px !important;
   border: none !important;
   outline: none !important;
   letter-spacing: 0.063rem;
 }
 .header2 {
-  font-size: 14pt !important;
+  font-size: 18px !important;
   border: none !important;
   outline: none !important;
   letter-spacing: 0.063rem;
@@ -156,7 +156,7 @@
   height: 10px !important;
 }
 .subtotalZero span {
-  font-size: 14pt;
+  font-size: 18px;
 }
 
 @media (min-width: 882px) {

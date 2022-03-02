@@ -84,7 +84,7 @@ function Home() {
   var count = 0;
   return (
     <React.Fragment>
-      <Header bread_crums="PURIMA82" />
+      <Header bread_crums="PURIM82" />
       {/* _addCart={_addCart} */}
       <div className={`home-p flex aic`}>
         {/* <div className={`home-p flex aic ${isPortrait == true && isMobile==true  ? 'borderNone' : ''}`}> */}

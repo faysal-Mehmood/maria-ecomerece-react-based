@@ -1,30 +1,30 @@
-import React, { useEffect, useState } from "react";
-import SlidingPane from "react-sliding-pane";
-import "react-sliding-pane/dist/react-sliding-pane.css";
-import { useSelector, useDispatch } from "react-redux";
-import axios from "axios";
-import { focus, isValidEmail, generateID } from "../core";
-import "../css/dialog.css";
+import React, { useEffect, useState } from 'react';
+import SlidingPane from 'react-sliding-pane';
+import 'react-sliding-pane/dist/react-sliding-pane.css';
+import { useSelector, useDispatch } from 'react-redux';
+import axios from 'axios';
+import { focus, isValidEmail, generateID } from '../core';
+import '../css/dialog.css';
 
 const ProductCartSlider = ({ isCartPaneOpen, setIsCartPaneOpen }, props) => {
   //console.log(props.id)
-  const [step, setStep] = useState("cart");
+  const [step, setStep] = useState('cart');
   //const [price,setprice] = useState('')
 
-  const [fullname, setfullname] = useState("");
-  const [streetaddress, setstreetaddress] = useState("");
-  const [address, setaddress] = useState("");
-  const [city, setcity] = useState("");
-  const [state, setstate] = useState("");
-  const [postalcode, setpostalcode] = useState("");
-  const [country, setcountry] = useState("");
-  const [cellphone, setcellphone] = useState("");
-  const [checkoutbtn, setcheckoutbtn] = useState("Ship to this address");
+  const [fullname, setfullname] = useState('');
+  const [streetaddress, setstreetaddress] = useState('');
+  const [address, setaddress] = useState('');
+  const [city, setcity] = useState('');
+  const [state, setstate] = useState('');
+  const [postalcode, setpostalcode] = useState('');
+  const [country, setcountry] = useState('');
+  const [cellphone, setcellphone] = useState('');
+  const [checkoutbtn, setcheckoutbtn] = useState('Ship to this address');
   const [Quantity, setquantity] = useState(1);
   const [disabled, setdisabled] = useState(false);
-  const [code, setcode] = useState("");
-  const [email, setemail] = useState("");
-  const [items, setitems] = useState("");
+  const [code, setcode] = useState('');
+  const [email, setemail] = useState('');
+  const [items, setitems] = useState('');
   const [subtotal, setsubtotal] = useState(0);
   const dispatch = useDispatch();
   /*useEffect(() => {
@@ -35,7 +35,7 @@ const ProductCartSlider = ({ isCartPaneOpen, setIsCartPaneOpen }, props) => {
   //console.log(dialogID)
   useEffect(() => {
     const oldaddress = JSON.parse(
-      localStorage.getItem("soshandeliverdaddress")
+      localStorage.getItem('soshandeliverdaddress')
     );
     if (oldaddress) {
       setfullname(oldaddress.fullname);
@@ -57,7 +57,7 @@ const ProductCartSlider = ({ isCartPaneOpen, setIsCartPaneOpen }, props) => {
     // console.log(cartItems);
     let calsubtotal = 0;
     cartItems.map((item) => {
-      if (item.Tzcolor === "Techelet (₪100)") {
+      if (item.Tzcolor === 'Techelet (₪100)') {
         calsubtotal = calsubtotal + item.Quantity * (item.price + 100);
       } else {
         calsubtotal = calsubtotal + item.Quantity * item.price;
@@ -78,19 +78,19 @@ const ProductCartSlider = ({ isCartPaneOpen, setIsCartPaneOpen }, props) => {
         >
           <div
             style={{
-              display: "flex",
-              flexDirection: "column",
+              display: 'flex',
+              flexDirection: 'column',
             }}
           >
             <button
               style={{
-                background: "none",
-                border: "none",
-                outline: "none !important",
-                fontSize: "1.6rem",
+                background: 'none',
+                border: 'none',
+                outline: 'none !important',
+                fontSize: '1.6rem',
                 padding: 0,
-                marginLeft: "auto",
-                color: "black",
+                marginLeft: 'auto',
+                color: 'black',
               }}
               onClick={() => setIsCartPaneOpen(!isCartPaneOpen)}
             >
@@ -100,20 +100,20 @@ const ProductCartSlider = ({ isCartPaneOpen, setIsCartPaneOpen }, props) => {
               <div
                 className="total flex aic py-4 mt-3"
                 style={{
-                  borderTop: "1px solid #000",
-                  borderBottom: "1px solid #000",
+                  borderTop: '1px solid #000',
+                  borderBottom: '1px solid #000',
                 }}
               >
                 <div
                   className="tt subtotalZero black"
                   style={{
-                    display: "block",
-                    margin: "0px auto",
+                    display: 'block',
+                    margin: '0px auto',
                   }}
                 >
                   <span>Subtotal :</span>
                   <span>
-                    {" "}
+                    {' '}
                     <strong style={{ fontWeight: 400 }} className="sign-cart">
                       &#8362;
                     </strong>
@@ -149,12 +149,10 @@ const ProductCartSlider = ({ isCartPaneOpen, setIsCartPaneOpen }, props) => {
                             <div className="item">
                               <div className="value flex ">
                                 {item.Quantity}
-                                <span className="font ">
-                                  &nbsp;&times;&nbsp;
-                                </span>
-                                <span className="money-sign font">₪</span>
+                                <span className="">&nbsp;&times;&nbsp;</span>
+                                <span className="money-sign">₪</span>
                                 {`${
-                                  item.Tzcolor === "Techelet (₪100)"
+                                  item.Tzcolor === 'Techelet (₪100)'
                                     ? item.price + 100
                                     : item.price
                                 }`}
@@ -167,7 +165,7 @@ const ProductCartSlider = ({ isCartPaneOpen, setIsCartPaneOpen }, props) => {
                                   onClick={() => {
                                     if (item.Quantity > 1) {
                                       dispatch({
-                                        type: "CART_UPDATE",
+                                        type: 'CART_UPDATE',
                                         payload: {
                                           id: item.id,
                                           Quantity: item.Quantity - 1,
@@ -175,18 +173,18 @@ const ProductCartSlider = ({ isCartPaneOpen, setIsCartPaneOpen }, props) => {
                                       });
                                     }
                                   }}
-                                  className="cleanbtn btn icon-minus font s15 c333 anim flex aic"
+                                  className="cleanbtn btn icon-minus  s15 c333 anim flex aic"
                                 />
                                 <input
                                   disabled
                                   value={`${item.Quantity}`}
-                                  className="cleanbtn iput font  c333"
+                                  className="cleanbtn iput   c333"
                                 />
                                 <button
                                   onClick={() => {
                                     if (item.Quantity < 30) {
                                       dispatch({
-                                        type: "CART_UPDATE",
+                                        type: 'CART_UPDATE',
                                         payload: {
                                           id: item.id,
                                           Quantity: item.Quantity + 1,
@@ -194,7 +192,7 @@ const ProductCartSlider = ({ isCartPaneOpen, setIsCartPaneOpen }, props) => {
                                       });
                                     }
                                   }}
-                                  className="cleanbtn btn icon-plus font  c333 anim flex aic"
+                                  className="cleanbtn btn icon-plus   c333 anim flex aic"
                                 />
                               </div>
                               {/*  */}
@@ -205,12 +203,12 @@ const ProductCartSlider = ({ isCartPaneOpen, setIsCartPaneOpen }, props) => {
                       <button
                         onClick={() => {
                           dispatch({
-                            type: "CART_DELETE_ITEM",
+                            type: 'CART_DELETE_ITEM',
                             payload: { id: item.id },
                           });
                         }}
-                        className="cross cleanbtn font s24 flex aic mr-2"
-                        style={{ outline: "none !important" }}
+                        className="cross cleanbtn  s24 flex aic mr-2"
+                        style={{ outline: 'none !important' }}
                       >
                         &times;
                       </button>
@@ -220,9 +218,9 @@ const ProductCartSlider = ({ isCartPaneOpen, setIsCartPaneOpen }, props) => {
 
                 <div className="total flex aic">
                   <div className="tt black">
-                    <span className="">Subtotal :</span>
-                    <span>
-                      {" "}
+                    <span style={{ fontSize: '18px' }}>Subtotal :</span>
+                    <span style={{ fontSize: '18px' }}>
+                      {' '}
                       <strong
                         className="money-sign-cart"
                         style={{ fontWeight: 400 }}
@@ -235,8 +233,8 @@ const ProductCartSlider = ({ isCartPaneOpen, setIsCartPaneOpen }, props) => {
                 </div>
                 <div className="actions flex aic">
                   <button
-                    className="btn button font checkoutBtn c000 anim pt11"
-                    onClick={() => setStep("checkout")}
+                    className="btn button font checkoutBtn c000 anim"
+                    onClick={() => setStep('checkout')}
                   >
                     Checkout
                   </button>
@@ -253,25 +251,25 @@ const ProductCartSlider = ({ isCartPaneOpen, setIsCartPaneOpen }, props) => {
     let themail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!fullname) {
       //Toast.show({html: "Please enter your full name.", time: 5})
-      focus("._fullname");
+      focus('._fullname');
     } else if (!streetaddress) {
       //Toast.show({html: "Please enter your correct street address.", time: 5})
-      focus("._street");
+      focus('._street');
     } else if (!city) {
       //Toast.show({html: "Please enter your city name.", time: 5})
-      focus("._city");
+      focus('._city');
     } else if (!country) {
       //Toast.show({html: "Please enter your country.", time: 5})
-      focus("._country");
+      focus('._country');
     } else if (!cellphone) {
       //Toast.show({html: "Please enter your cellphone.", time: 5})
-      focus("._phone");
+      focus('._phone');
     } else if (!email || !email.match(themail)) {
       //Toast.show({html: "Please enter valid email address."})
-      focus("._email");
+      focus('._email');
     } else {
       localStorage.setItem(
-        "soshandeliverdaddress",
+        'soshandeliverdaddress',
         JSON.stringify({
           fullname,
           streetaddress,
@@ -290,11 +288,11 @@ const ProductCartSlider = ({ isCartPaneOpen, setIsCartPaneOpen }, props) => {
   };
 
   const checkout = async () => {
-    setcheckoutbtn("Loading...");
+    setcheckoutbtn('Loading...');
     setdisabled(true);
     try {
       const oldaddress = JSON.parse(
-        localStorage.getItem("soshandeliverdaddress")
+        localStorage.getItem('soshandeliverdaddress')
       );
       if (code) {
         const res = await axios.post(
@@ -309,7 +307,7 @@ const ProductCartSlider = ({ isCartPaneOpen, setIsCartPaneOpen }, props) => {
           //Toast.show({ html: `Your code was incorrect, No discount`,type : "error", time: 5 });
         }
       }
-      console.log("cart items...", {
+      console.log('cart items...', {
         ...props.data,
         code: code,
         address: oldaddress,
@@ -320,7 +318,7 @@ const ProductCartSlider = ({ isCartPaneOpen, setIsCartPaneOpen }, props) => {
       );
       window.location.href = res.data.url;
     } catch (error) {
-      console.log("checkout error...", error.message);
+      console.log('checkout error...', error.message);
       setdisabled(true);
       if (error.response) {
         //Toast.show({ html: `${error.response.data.errors}`,type : "error", time: 5 });
@@ -339,19 +337,19 @@ const ProductCartSlider = ({ isCartPaneOpen, setIsCartPaneOpen }, props) => {
       >
         <div
           style={{
-            display: "flex",
-            flexDirection: "column",
+            display: 'flex',
+            flexDirection: 'column',
           }}
         >
           <button
             style={{
-              background: "none",
-              border: "none",
-              outline: "none",
-              fontSize: "1.6rem",
+              background: 'none',
+              border: 'none',
+              outline: 'none',
+              fontSize: '1.6rem',
               padding: 0,
-              marginLeft: "auto",
-              color: "black",
+              marginLeft: 'auto',
+              color: 'black',
             }}
             onClick={() => setIsCartPaneOpen(!isCartPaneOpen)}
           >
@@ -364,7 +362,7 @@ const ProductCartSlider = ({ isCartPaneOpen, setIsCartPaneOpen }, props) => {
                 onChange={(e) => setfullname(e.target.value)}
                 value={fullname}
                 placeholder="Name"
-                className="iput _fullname cleanbtn font  c333 anim"
+                className="iput _fullname cleanbtn   c333 anim"
               />
             </div>
             <div className="item flex flex-col">
@@ -373,7 +371,7 @@ const ProductCartSlider = ({ isCartPaneOpen, setIsCartPaneOpen }, props) => {
                 onChange={(e) => setstreetaddress(e.target.value)}
                 value={streetaddress}
                 placeholder="Street"
-                className="iput _street cleanbtn font  c333 anim"
+                className="iput _street cleanbtn   c333 anim"
               />
             </div>
             {/*
@@ -387,7 +385,7 @@ const ProductCartSlider = ({ isCartPaneOpen, setIsCartPaneOpen }, props) => {
                 onChange={(e) => setcity(e.target.value)}
                 value={city}
                 placeholder="City"
-                className="iput _city cleanbtn font c333 anim"
+                className="iput _city cleanbtn  c333 anim"
               />
             </div>
             <div className="item flex flex-col">
@@ -396,7 +394,7 @@ const ProductCartSlider = ({ isCartPaneOpen, setIsCartPaneOpen }, props) => {
                 onChange={(e) => setstate(e.target.value)}
                 value={state}
                 placeholder="State"
-                className="iput _state cleanbtn font c333 anim"
+                className="iput _state cleanbtn  c333 anim"
               />
             </div>
             <div className="item flex flex-col">
@@ -405,7 +403,7 @@ const ProductCartSlider = ({ isCartPaneOpen, setIsCartPaneOpen }, props) => {
                 onChange={(e) => setpostalcode(e.target.value)}
                 value={postalcode}
                 placeholder="Post code"
-                className="iput _postal cleanbtn font c333 anim"
+                className="iput _postal cleanbtn  c333 anim"
               />
             </div>
             <div className="item flex flex-col">
@@ -414,18 +412,18 @@ const ProductCartSlider = ({ isCartPaneOpen, setIsCartPaneOpen }, props) => {
                 onChange={(e) => setcountry(e.target.value)}
                 value={country}
                 placeholder="Country"
-                className="iput _country cleanbtn font c333 anim"
+                className="iput _country cleanbtn  c333 anim"
               />
             </div>
             <div className="item flex flex-col">
               <input
                 type="number"
                 onChange={(e) =>
-                  setcellphone(e.target.value.replace(/[^0-9\.]/g, ""))
+                  setcellphone(e.target.value.replace(/[^0-9\.]/g, ''))
                 }
                 value={cellphone}
                 placeholder="Phone"
-                className="iput _phone cleanbtn font c333 anim"
+                className="iput _phone cleanbtn  c333 anim"
               />
             </div>
             <div className="item flex flex-col">
@@ -434,14 +432,14 @@ const ProductCartSlider = ({ isCartPaneOpen, setIsCartPaneOpen }, props) => {
                 onChange={(e) => setemail(e.target.value)}
                 value={email}
                 placeholder="Email"
-                className="iput _email cleanbtn font c333 anim"
+                className="iput _email cleanbtn  c333 anim"
               />
             </div>
             <div className="item flex flex-col">
               <input
                 onChange={(e) => setcode(e.target.value)}
                 type="text"
-                className="iput cleanbtn font c333 anim"
+                className="iput cleanbtn c333 anim"
                 placeholder="Promo code"
                 value={code}
               />
@@ -449,7 +447,7 @@ const ProductCartSlider = ({ isCartPaneOpen, setIsCartPaneOpen }, props) => {
             <div className="item flex flex-col">
               <button
                 disabled={disabled}
-                className="button shipButton btn font "
+                className="button shipButton btn  "
                 onClick={() => saveaddress()}
               >
                 {checkoutbtn}
@@ -470,19 +468,19 @@ const ProductCartSlider = ({ isCartPaneOpen, setIsCartPaneOpen }, props) => {
       >
         <div
           style={{
-            display: "flex",
-            flexDirection: "column",
+            display: 'flex',
+            flexDirection: 'column',
           }}
         >
           <button
             style={{
-              background: "none",
-              border: "none",
-              outline: "none",
-              fontSize: "1.6rem",
+              background: 'none',
+              border: 'none',
+              outline: 'none',
+              fontSize: '1.6rem',
               padding: 0,
-              marginLeft: "auto",
-              color: "black",
+              marginLeft: 'auto',
+              color: 'black',
             }}
             onClick={() => setIsCartPaneOpen(!isCartPaneOpen)}
           >
@@ -490,10 +488,7 @@ const ProductCartSlider = ({ isCartPaneOpen, setIsCartPaneOpen }, props) => {
           </button>
           <div className="payment flex flex-col aic">
             <div className="item flex flex-col">
-              <button
-                className="button btn font s15 b"
-                onClick={() => checkout()}
-              >
+              <button className="button btn  s15 b" onClick={() => checkout()}>
                 {checkoutbtn}
               </button>
             </div>
@@ -504,11 +499,11 @@ const ProductCartSlider = ({ isCartPaneOpen, setIsCartPaneOpen }, props) => {
   };
 
   switch (step) {
-    case "cart":
+    case 'cart':
       return _cart();
-    case "checkout":
+    case 'checkout':
       return _checkout();
-    case "payment":
+    case 'payment':
       return _payment();
     default:
       return _cart();
