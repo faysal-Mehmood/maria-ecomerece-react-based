@@ -179,7 +179,7 @@ const Cart = (props) => {
             </div>
             <div className="actions flex aic">
               <button
-                className="btn button font checkoutBtn c000 anim"
+                className="btn button  checkoutBtn c000 anim"
                 onClick={() => setStep('checkout')}
               >
                 Checkout

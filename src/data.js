@@ -39,7 +39,7 @@ const data = [
     _id: 2,
     name: 'EASTERN SHIRT',
     slug: 'eastern-shirt',
-    bread_crums: 'PURIMA82',
+    bread_crums: 'PURIM82',
     front_image: 'est-side-pic.jpg',
     back_image: 'est-back-pic.jpg',
     price: '1800.00',
