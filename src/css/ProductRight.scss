@@ -138,12 +138,24 @@
   border: none !important;
   outline: none !important;
   letter-spacing: 0.063rem;
+  @media screen and (max-width:767px) {
+    font-size: 16px !important;
+  }
+  @media screen and (max-width:390px) {
+    font-size: 14px !important;
+  }
 }
 .header2 {
   font-size: 18px !important;
   border: none !important;
   outline: none !important;
   letter-spacing: 0.063rem;
+  @media screen and (max-width:767px) {
+    font-size: 16px !important;
+  }
+  @media screen and (max-width:390px) {
+    font-size: 14px !important;
+  }
 }
 
 .slidePane {
