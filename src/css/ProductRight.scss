@@ -17,6 +17,9 @@
     .btn {
       font-size: 22px;
       outline: none !important;
+      @media screen and (max-width:767px) {
+        font-size: 16px !important;
+      }
     }
   }
 
@@ -27,6 +30,10 @@
     justify-content: center;
     h4 {
       font-size: 22px;
+      @media screen and (max-width:767px) {
+        font-size: 16px !important;
+      }
+      
     }
   }
 }
@@ -43,6 +50,9 @@
     word-spacing: 20px;
     letter-spacing: 0.063rem;
     font-size: 18px;
+    @media screen and (max-width:767px) {
+      font-size: 14px !important;
+    }
   }
   .para_2 {
     display: flex;
@@ -50,6 +60,9 @@
     letter-spacing: 0.063rem;
     word-spacing: 20px;
     font-size: 18px;
+    @media screen and (max-width:767px) {
+      font-size: 14px !important;
+    }
   }
 }
 .third_section {
@@ -60,6 +73,9 @@
       letter-spacing: 0.063rem;
       li {
         font-size: 18px;
+        @media screen and (max-width:767px) {
+          font-size: 14px !important;
+        }
       }
     }
   }
@@ -69,6 +85,10 @@
       li {
         .iput {
           font-size: 18px;
+          @media screen and (max-width:767px) {
+            font-size: 14px !important;
+          }
+          
         }
       }
     }
@@ -83,6 +103,9 @@
   }
   .paraPoint {
     font-size: 18px;
+    @media screen and (max-width:767px) {
+      font-size: 14px !important;
+    }
   }
   .paraPoint.para1 {
     word-spacing: 20px;
