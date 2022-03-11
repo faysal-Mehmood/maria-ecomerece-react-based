@@ -218,8 +218,8 @@ const ProductCartSlider = ({ isCartPaneOpen, setIsCartPaneOpen }, props) => {
 
                 <div className="total flex aic">
                   <div className="tt black">
-                    <span style={{ fontSize: '18px' }}>Subtotal :</span>
-                    <span style={{ fontSize: '18px' }}>
+                    <span>Subtotal :</span>
+                    <span>
                       {' '}
                       <strong
                         className="money-sign-cart"
