@@ -123,6 +123,24 @@
   .paraPoint.para5 {
     word-spacing: 20px;
   }
+
+  @media screen and (max-width: 400px) {
+    .paraPoint.para1 {
+      word-spacing: 3.5px !important;
+    }
+    .paraPoint.para2 {
+      word-spacing: 3.5px !important;
+    }
+    .paraPoint.para3 {
+      word-spacing: 3.5px !important;
+    }
+    .paraPoint.para4 {
+      word-spacing: 3.5px !important;
+    }
+    .paraPoint.para5 {
+      word-spacing: 3.5px !important;
+    }
+  }
 }
 .newCleanBtn {
   font-size: 12pt !important;
@@ -139,6 +157,12 @@
   @media screen and (max-width: 767px) {
     font-size: 14px !important;
   }
+  @media screen and (max-width: 400px) {
+    font-size: 12px !important;
+  }
+  @media screen and (max-width: 340px) {
+    font-size: 10px !important;
+  }
 }
 .header2 {
   font-size: 18px !important;
@@ -147,6 +171,12 @@
   letter-spacing: 0.063rem;
   @media screen and (max-width: 767px) {
     font-size: 14px !important;
+  }
+  @media screen and (max-width: 400px) {
+    font-size: 12px !important;
+  }
+  @media screen and (max-width: 340px) {
+    font-size: 10px !important;
   }
 }
 

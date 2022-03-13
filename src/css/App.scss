@@ -383,7 +383,7 @@ $borderColor: #020102;
       flex-direction: column;
     }
     .left {
-      // flex: 1;
+      flex: 1;
       max-width: 50%;
       border-right: 1px solid $borderColor;
       justify-content: center;
