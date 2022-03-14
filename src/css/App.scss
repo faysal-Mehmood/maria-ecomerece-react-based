@@ -379,7 +379,7 @@ $borderColor: #020102;
 // Product page
 .product-p {
   .wrap {
-    @include media('<=tablet') {
+    @include media('<=767px') {
       flex-direction: column;
     }
     .left {
@@ -388,7 +388,7 @@ $borderColor: #020102;
       border-right: 1px solid $borderColor;
       justify-content: center;
       overflow: hidden;
-      @include media('<=tablet') {
+      @include media('<=767px') {
         border-right: none;
         border-bottom: 1px solid $borderColor;
         max-width: 100%;

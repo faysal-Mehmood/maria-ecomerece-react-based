@@ -251,11 +251,11 @@
     padding-left: 20px !important;
     padding-right: 26px !important;
   }
-  .right_panel {
-    width: 100%;
-    font-size: 12pt;
-    text-align: justify !important;
-  }
+  // .right_panel {
+  //   width: 100%;
+  //   font-size: 12pt;
+  //   text-align: justify !important;
+  // }
   .first_section {
     font-size: 12pt;
     button {
@@ -321,4 +321,10 @@
   // .header2 {
   //   font-size: 12pt !important;
   // }
+}
+@media (max-width: 767px) {
+  .right_panel {
+    width: 100%;
+ 
+  }
 }
