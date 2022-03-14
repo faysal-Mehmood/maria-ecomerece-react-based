@@ -45,21 +45,23 @@
   }
   .para_1 {
     display: flex;
+    justify-content: center;
     align-items: center;
-    word-spacing: 20px;
+    word-spacing: 9px;
     letter-spacing: 0.063rem;
     font-size: 18px;
-    @media screen and (max-width: 767px) {
+    @media screen and (max-width: 1024px) {
       font-size: 14px !important;
     }
   }
   .para_2 {
     display: flex;
+    justify-content: center;
     align-items: center;
     letter-spacing: 0.063rem;
-    word-spacing: 20px;
+    word-spacing: 9px;
     font-size: 18px;
-    @media screen and (max-width: 767px) {
+    @media screen and (max-width: 1024px) {
       font-size: 14px !important;
     }
   }
@@ -68,11 +70,15 @@
   .left_section {
     border-right: 1px solid #000;
     ul {
+      text-align: center;
       list-style: none;
       letter-spacing: 0.063rem;
+      @media screen and (min-width: 1400px) {
+        margin-left: 40px !important;
+      }
       li {
         font-size: 18px;
-        @media screen and (max-width: 767px) {
+        @media screen and (max-width: 1024px) {
           font-size: 14px !important;
         }
       }
@@ -84,7 +90,7 @@
       li {
         .iput {
           font-size: 18px;
-          @media screen and (max-width: 767px) {
+          @media screen and (max-width: 1024px) {
             font-size: 14px !important;
           }
         }
@@ -96,49 +102,50 @@
   border-top: 1px solid #000;
   .paraPoint {
     display: flex;
+    justify-content: center;
     align-items: center;
     letter-spacing: 0.063rem;
   }
   .paraPoint {
     font-size: 18px;
-    @media screen and (max-width: 767px) {
+    @media screen and (max-width: 1024px) {
       font-size: 14px !important;
     }
   }
   .paraPoint.para1 {
-    word-spacing: 20px;
+    word-spacing: 18px;
   }
   .paraPoint.para2.eastern {
-    word-spacing: 20px;
+    word-spacing: 18px;
   }
   .paraPoint.para2 {
-    word-spacing: 20px;
+    word-spacing: 18px;
   }
   .paraPoint.para3 {
-    word-spacing: 20px;
+    word-spacing: 18px;
   }
   .paraPoint.para4 {
-    word-spacing: 20px;
+    word-spacing: 18px;
   }
   .paraPoint.para5 {
-    word-spacing: 20px;
+    word-spacing: 18px;
   }
 
   @media screen and (max-width: 400px) {
     .paraPoint.para1 {
-      word-spacing: 3.5px !important;
+      word-spacing: 7px !important;
     }
     .paraPoint.para2 {
-      word-spacing: 3.5px !important;
+      word-spacing: 7px !important;
     }
     .paraPoint.para3 {
-      word-spacing: 3.5px !important;
+      word-spacing: 7px !important;
     }
     .paraPoint.para4 {
-      word-spacing: 3.5px !important;
+      word-spacing: 7px !important;
     }
     .paraPoint.para5 {
-      word-spacing: 3.5px !important;
+      word-spacing: 7px !important;
     }
   }
 }
@@ -220,10 +227,10 @@
 }
 
 @media (min-width: 882px) {
-  .extraMargin {
-    margin-left: 12px !important;
-    margin-right: 75px !important;
-  }
+  // .extraMargin {
+  //   margin-left: 12px !important;
+  //   margin-right: 75px !important;
+  // }
   .variationSelect {
     margin-left: 50px !important;
   }
@@ -271,11 +278,11 @@
   .second_section {
     .para_1 {
       letter-spacing: 0.063rem;
-      word-spacing: 5.2px;
+      word-spacing: 3px;
     }
     .para_2 {
       letter-spacing: 0.063rem;
-      word-spacing: 5px;
+      word-spacing: 2.5px;
     }
   }
   .third_section {
@@ -304,10 +311,10 @@
       word-spacing: 9.6px;
     }
     .paraPoint.para4 {
-      word-spacing: 10.3px;
+      word-spacing: 9px;
     }
     .paraPoint.para5 {
-      word-spacing: 10.9px;
+      word-spacing: 9px;
     }
   }
 
@@ -325,6 +332,5 @@
 @media (max-width: 767px) {
   .right_panel {
     width: 100%;
- 
   }
 }
