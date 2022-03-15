@@ -116,7 +116,7 @@
     word-spacing: 20px;
   }
   .paraPoint.para2.eastern {
-    word-spacing: 21px;
+    word-spacing: 22.3px;
   }
   .paraPoint.para2 {
     word-spacing: 18px;
@@ -129,7 +129,6 @@
   }
   .paraPoint.para5 {
     word-spacing: 18px;
-    margin-bottom: 0px !important;
   }
 
   @media screen and (max-width: 400px) {
@@ -147,6 +146,23 @@
     }
     .paraPoint.para5 {
       word-spacing: 8px !important;
+    }
+  }
+  @media screen and (max-width: 372px) {
+    .paraPoint.para1 {
+      word-spacing: 3px !important;
+    }
+    .paraPoint.para2 {
+      word-spacing: 8px !important;
+    }
+    .paraPoint.para3 {
+      word-spacing: 5px !important;
+    }
+    .paraPoint.para4 {
+      word-spacing: 6px !important;
+    }
+    .paraPoint.para5 {
+      word-spacing: 6px !important;
     }
   }
 }
@@ -333,5 +349,17 @@
 @media (max-width: 767px) {
   .right_panel {
     width: 100%;
+  }
+}
+@media (max-width: 767px) {
+  .second_section {
+    .para_1 {
+      letter-spacing: 0.063rem;
+      word-spacing: 0.5px;
+    }
+    .para_2 {
+      letter-spacing: 0.063rem;
+      word-spacing: 0.5px;
+    }
   }
 }
