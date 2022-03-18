@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import SlidingPane from "react-sliding-pane";
 import "react-sliding-pane/dist/react-sliding-pane.css";
 import ProductImgSlideShow from "./ProductImgSlideShow";
@@ -10,12 +10,18 @@ const ProductImgSlider = ({
   frontImage,
   backImage,
 }) => {
+  const [zoomerWidth,setzoomerWidth]=useState(false);
+  function closefun(){
+    setIsPaneOpenRight(!isPaneOpenRight);
+    setzoomerWidth(false)
+  }
   return (
     <SlidingPane
       isOpen={isPaneOpenRight}
       from="left"
-      className="imgPane"
+      className={zoomerWidth ? "zoomerPane":"imgPane"}
       onRequestClose={() => setIsPaneOpenRight(!isPaneOpenRight)}
+    
     >
       <div
         style={{
@@ -35,11 +41,11 @@ const ProductImgSlider = ({
             marginBottom: ".3rem",
             color: "black"
           }}
-          onClick={() => setIsPaneOpenRight(!isPaneOpenRight)}
+          onClick={closefun}
         >
           &times;
         </button>
-        <ProductImgSlideShow frontImage={frontImage} backImage={backImage} />
+        <ProductImgSlideShow frontImage={frontImage} backImage={backImage} setzoomerWidth={setzoomerWidth}/>
       </div>
     </SlidingPane>
   );

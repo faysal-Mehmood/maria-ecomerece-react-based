@@ -2,7 +2,7 @@ import React from "react";
 import { Slide } from "react-slideshow-image";
 import "react-slideshow-image/dist/styles.css";
 
-const ProductImgSlideShow = ({ frontImage, backImage }) => {
+const ProductImgSlideShow = ({ frontImage, backImage,setzoomerWidth }) => {
   const slideImages = [
     {
       url: frontImage,
@@ -18,7 +18,7 @@ const ProductImgSlideShow = ({ frontImage, backImage }) => {
       <Slide autoplay={false}>
         {slideImages.map((slideImage, index) => (
           <div className="each-slide" key={index}>
-            <img className="slide-main-img" src={slideImage.url} />
+            <img className="slide-main-img" src={slideImage.url} onClick={()=>setzoomerWidth(true)} />
           </div>
         ))}
       </Slide>
