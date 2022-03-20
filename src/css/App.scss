@@ -363,9 +363,11 @@ $borderColor: #020102;
       width: 100%;
     }
     .img {
-      height: 100%;
-      min-width: 90%;
-      max-height: calc(100vh - 120px);
+      // height: 100%;
+      // min-width: 90%;
+      // max-height: calc(100vh - 120px);
+      width: 100%;
+      height: auto;
     }
   }
   .rit {
@@ -376,7 +378,10 @@ $borderColor: #020102;
     }
   }
 }
-
+.each-slide {
+  max-width: 650px;
+  margin: auto;
+}
 // Product page
 .product-p {
   .wrap {
