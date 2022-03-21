@@ -47,7 +47,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    word-spacing: 11px;
+    word-spacing: 12px;
     letter-spacing: 0.063rem;
     font-size: 18px;
     @media screen and (max-width: 1024px) {
@@ -59,7 +59,7 @@
     justify-content: center;
     align-items: center;
     letter-spacing: 0.063rem;
-    word-spacing: 11px;
+    word-spacing: 12px;
     font-size: 18px;
     @media screen and (max-width: 1024px) {
       font-size: 14px !important;
@@ -116,10 +116,10 @@
     }
   }
   .paraPoint.para1 {
-    word-spacing: 20px;
+    word-spacing: 19.3px;
   }
   .paraPoint.para2.eastern {
-    word-spacing: 22.3px;
+    word-spacing: 22px;
   }
   .paraPoint.para2 {
     word-spacing: 18px;
@@ -136,19 +136,19 @@
 
   @media screen and (max-width: 400px) {
     .paraPoint.para1 {
-      word-spacing: 7px !important;
+      word-spacing: 5px !important;
     }
     .paraPoint.para2 {
-      word-spacing: 8px !important;
+      word-spacing: 8.5px !important;
     }
     .paraPoint.para3 {
-      word-spacing: 7px !important;
+      word-spacing: 5px !important;
     }
     .paraPoint.para4 {
-      word-spacing: 8px !important;
+      word-spacing: 5.5px !important;
     }
     .paraPoint.para5 {
-      word-spacing: 8px !important;
+      word-spacing: 6px !important;
     }
   }
   @media screen and (max-width: 372px) {
