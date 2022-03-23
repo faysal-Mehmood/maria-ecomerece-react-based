@@ -412,9 +412,10 @@ $borderColor: #020102;
         }
       }
       img {
-        height: 100%;
-        min-width: 90%;
-        max-height: calc(100vh - 120px);
+        // height: 100%;
+        // min-width: 90%;
+        // max-height: calc(100vh - 120px);
+        max-width: 650px;
         @include media('<=1225px') {
           height: 91%;
           width: 100%;
