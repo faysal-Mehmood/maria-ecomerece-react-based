@@ -1,25 +1,25 @@
-import React, { useEffect, useState } from "react";
-import Header from "../components/Header";
-import Selector from "../components/Selector";
-import Footer from "../components/Footer";
-import { Dialog, generateID } from "../core";
-import Cart from "./Cart";
-import { Toast } from "../ui";
-import { useDispatch } from "react-redux";
-import Image3 from "../images/pic-3.jpeg";
-import Image4 from "../images/pic-4.jpeg";
-import "../css/_custom.css";
+import React, { useEffect, useState } from 'react';
+import Header from '../components/Header';
+import Selector from '../components/Selector';
+import Footer from '../components/Footer';
+import { Dialog, generateID } from '../core';
+import Cart from './Cart';
+import { Toast } from '../ui';
+import { useDispatch } from 'react-redux';
+import Image3 from '../images/pic-3.jpeg';
+import Image4 from '../images/pic-4.jpeg';
+import '../css/_custom.css';
 
 // import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import "zoom-hover";
-import axios from "axios";
-import "../css/ProductRight.scss";
-import data from "../data";
-import ProductImgSlider from "../components/ProductImgSlider";
-import ProductCartSlider from "../components/ProductCartSlider";
-import { useMediaQuery } from "react-responsive";
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+import 'zoom-hover';
+import axios from 'axios';
+import '../css/ProductRight.scss';
+import data from '../data';
+import ProductImgSlider from '../components/ProductImgSlider';
+import ProductCartSlider from '../components/ProductCartSlider';
+import { useMediaQuery } from 'react-responsive';
 
 function useForceUpdate() {
   const [value, setValue] = useState(0); // integer state
@@ -35,37 +35,37 @@ function Product({ match }) {
   const iphone4 = useMediaQuery({
     minWidth: 320,
     maxWidth: 480,
-    orientation: "landscape",
+    orientation: 'landscape',
   });
   const iphone5 = useMediaQuery({
     minWidth: 375,
     maxWidth: 667,
-    orientation: "landscape",
+    orientation: 'landscape',
   });
   const iphone678 = useMediaQuery({
     minWidth: 375,
     maxWidth: 667,
-    orientation: "landscape",
+    orientation: 'landscape',
   });
   const iphoneX = useMediaQuery({
     minWidth: 375,
     maxWidth: 812,
-    orientation: "landscape",
+    orientation: 'landscape',
   });
   const ipad = useMediaQuery({
     minWidth: 768,
     maxWidth: 1024,
-    orientation: "landscape",
+    orientation: 'landscape',
   });
   const iphonemax = useMediaQuery({
     minWidth: 414,
     maxWidth: 896,
-    orientation: "landscape",
+    orientation: 'landscape',
   });
   const samsung_galaxy = useMediaQuery({
     minWidth: 320,
     maxWidth: 640,
-    orientation: "landscape",
+    orientation: 'landscape',
   });
   // console.log(iphone4,iphone5,iphone679,iphoneX,ipad,iphonemax,samsung_galaxy )
 
@@ -94,16 +94,15 @@ function Product({ match }) {
       setIsCartPaneOpen(!isCartPaneOpen);
       // Toast.show({ html: "Added to cart successfully", type: "ok", time: 5 });
       const id = generateID(5, 5);
-      const cart = JSON.parse(localStorage.getItem("shoshancartupdate"));
+      const cart = JSON.parse(localStorage.getItem('shoshancartupdate'));
       if (cart) {
         localStorage.setItem(
-          "shoshancartupdate",
+          'shoshancartupdate',
           JSON.stringify([
             {
               id,
               Size,
-              price:
-         product.price,
+              price: product.price,
               Corner,
               Tzcolor,
               Tzstyle,
@@ -113,13 +112,12 @@ function Product({ match }) {
         );
       } else {
         localStorage.setItem(
-          "shoshancartupdate",
+          'shoshancartupdate',
           JSON.stringify([
             {
               id,
               Size,
-              price:
-       product.price,
+              price: product.price,
               Corner,
               Tzcolor,
               Tzstyle,
@@ -128,7 +126,7 @@ function Product({ match }) {
         );
       }
       dispatch({
-        type: "CART",
+        type: 'CART',
         payload: [
           {
             id,
@@ -136,8 +134,7 @@ function Product({ match }) {
             image: product.front_image,
             Size,
             Corner,
-            price:
-              product.price,
+            price: product.price,
             Tzcolor,
             Tzstyle,
             Quantity: 1,
@@ -235,12 +232,12 @@ function Product({ match }) {
             <div className="col-6 right_section ">
               <button
                 disabled={!activestatus}
-                className={`btn m-0 p-0 py-4 ${activestatus ? "" : "closed"}`}
+                className={`btn m-0 p-0 py-4 ${activestatus ? '' : 'closed'}`}
                 onClick={() => {
                   _saveCart();
                 }}
               >
-                {activestatus ? "Purchase" : "Order Closed"}
+                {activestatus ? 'Purchase' : 'Order Closed'}
               </button>
             </div>
           </div>
@@ -248,14 +245,14 @@ function Product({ match }) {
             <div className="col-md-12 m-0 p-0">
               <p
                 className={`para_1 m-0 p-0 mx-4 mt-4 extraMargin ${
-                  condition == true ? "alignText" : ""
+                  condition == true ? 'alignText' : ''
                 }`}
               >
                 {product.description.line_1}
               </p>
               <p
                 className={`para_2 m-0 p-0 my-4 mx-4 extraMargin ${
-                  condition == true ? "alignText" : ""
+                  condition == true ? 'alignText' : ''
                 }`}
               >
                 {product.description.line_2}
@@ -265,21 +262,23 @@ function Product({ match }) {
           <div className="row third_section">
             <div className="col-6 m-0 p-0 left_section">
               <ul
-                style={{ paddingLeft: "30% !important" }}
+                style={{ paddingLeft: '30% !important' }}
                 className={`m-0 p-0 mx-4 my-4 extraMargin ${
-                  condition == true ? "marginLeft" : ""
+                  condition == true ? 'marginLeft' : ''
                 }`}
               >
                 <li className="m-0 p-0 mb-4">Product size</li>
                 <li className="m-0 p-0 mb-4">Corner style</li>
-                <li className="m-0 p-0 mb-4">Tzitzit style</li>
-                <li>Tzitzit color</li>
+                <li className="m-0 p-0 mb-4" style={{ marginLeft: '-8px' }}>
+                  Tzitzit style
+                </li>
+                <li style={{ marginLeft: '-3px' }}>Tzitzit color</li>
               </ul>
             </div>
             <div className="col-6 m-0 p-0 right_section">
               <ul
                 className={`m-0 p-0 mx-4 variationSelect my-4 ${
-                  condition == true ? "marginLeft paddingRight" : ""
+                  condition == true ? 'marginLeft paddingRight' : ''
                 }`}
               >
                 <li className="m-0 p-0 mb-4">
@@ -287,8 +286,8 @@ function Product({ match }) {
                     onchange={setsize}
                     selected={Size}
                     data={product.size}
-                    type={"size"}
-                    init={"Select"}
+                    type={'size'}
+                    init={'Select'}
                     setSelector={setactiveselector}
                     activeselector={activeselector}
                   />
@@ -298,8 +297,8 @@ function Product({ match }) {
                     onchange={setcorner}
                     selected={Corner}
                     data={product.corner}
-                    type={"corner"}
-                    init={"Select"}
+                    type={'corner'}
+                    init={'Select'}
                     setSelector={setactiveselector}
                     activeselector={activeselector}
                   />
@@ -309,8 +308,8 @@ function Product({ match }) {
                     onchange={setTzstyle}
                     selected={Tzstyle}
                     data={product.tzStyle}
-                    type={"tzStyle"}
-                    init={"Select"}
+                    type={'tzStyle'}
+                    init={'Select'}
                     setSelector={setactiveselector}
                     activeselector={activeselector}
                   />
@@ -320,8 +319,8 @@ function Product({ match }) {
                     onchange={setTzcolor}
                     selected={Tzcolor}
                     data={product.tzColor}
-                    type={"tzColor"}
-                    init={"Select"}
+                    type={'tzColor'}
+                    init={'Select'}
                     setSelector={setactiveselector}
                     activeselector={activeselector}
                   />
@@ -332,7 +331,7 @@ function Product({ match }) {
           <div className="row fourth_section">
             <div
               className={`col-md-12 p-0 m-0 mt-4 ${
-                condition == true ? "alignText" : ""
+                condition == true ? 'alignText' : ''
               }`}
             >
               {product.features.map((item, idx) => (
@@ -340,8 +339,8 @@ function Product({ match }) {
                   className={`m-0 text-justify paraPoint para${
                     idx + 1
                   } mb-4 mx-4 extraMargin ${
-                    condition == true ? "alignText" : ""
-                  } ${item.eastern ? "eastern" : ""}`}
+                    condition == true ? 'alignText' : ''
+                  } ${item.eastern ? 'eastern' : ''}`}
                 >
                   + {item.point}
                 </p>
